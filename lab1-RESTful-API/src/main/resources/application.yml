@@ -1,14 +1,0 @@
-server:
-  port: 8080
-  servlet:    context-path: /REST
-    
-management:
-  endpoints:
-    web:
-      exposure:
-        include:
-        - "*"
-
-  endpoint:
-    shutdown:
-      enabled: true
