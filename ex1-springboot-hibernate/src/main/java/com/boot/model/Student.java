@@ -23,20 +23,20 @@ public class Student {
 	private String name;
 	
 	private int marks;
-	@OneToMany(mappedBy = "laptop")
-	private Set<Laptop> laptop;
+//	@OneToMany(mappedBy = "laptop")
+//	private Set<Laptop> laptop;
 	
-//	@OneToOne
-//	private Laptop laptop;
+	@OneToOne
+	private Laptop laptop;
 
 	
-//	public Laptop getLaptop() {
-//		return laptop;
-//	}
-//
-//	public void setLaptop(Laptop laptop) {
-//		this.laptop = laptop;
-//	}
+	public Laptop getLaptop() {
+		return laptop;
+	}
+
+	public void setLaptop(Laptop laptop) {
+		this.laptop = laptop;
+	}
 
 	
 
@@ -45,13 +45,13 @@ public class Student {
 		return rollno;
 	}
 
-	public Set<Laptop> getLaptop() {
-		return laptop;
-	}
-
-	public void setLaptop(Set<Laptop> laptop) {
-		this.laptop = laptop;
-	}
+//	public Set<Laptop> getLaptop() {
+//		return laptop;
+//	}
+//
+//	public void setLaptop(Set<Laptop> laptop) {
+//		this.laptop = laptop;
+//	}
 
 	public void setRollno(int rollno) {
 		this.rollno = rollno;
