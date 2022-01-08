@@ -8,22 +8,20 @@ import org.springframework.web.bind.annotation.RestController;
 import com.boot.model.Laptop;
 import com.boot.model.Student;
 import com.boot.repository.LaptopRepo;
-import com.boot.repository.StudentRepo;
+import com.boot.service.StudentService;
 
 @RestController
 public class StudentController {
 
 	@Autowired
-	StudentRepo sRepo;
+	StudentService sService;
 
-	@Autowired
-	LaptopRepo lRepo;
-	
+
 	@PostMapping("/student")
 	@ResponseBody
 	public void addStudent(Student std, Laptop lapi) {
-		sRepo.save(std);
-		lRepo.save(lapi);
+		sService.addStudent(std, lapi);
+		
 	}
 
 }
