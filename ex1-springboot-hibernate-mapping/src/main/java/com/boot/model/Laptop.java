@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 
 @Entity
 public class Laptop {
@@ -14,6 +13,8 @@ public class Laptop {
 	private int lid;
 
 	private String lname;
+	
+
 
 	public int getLid() {
 		return lid;

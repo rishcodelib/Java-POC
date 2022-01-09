@@ -1,50 +1,25 @@
 package com.boot.model;
 
-import java.util.Set;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Teacher {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int teacherId;
 
 	private String teacherName;
-// Testing One to Many Relationship
-// Teacher has Assigned Multiple Students
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "student_id")
-	private Set<Student> student;
-
-	
-	
-	public Teacher(int teacherId, String teacherName, Set<Student> student) {
-		super();
-		this.teacherId = teacherId;
-		this.teacherName = teacherName;
-		this.student = student;
-	}
-
-	public Set<Student> getStudent() {
-		return student;
-	}
-
-	public void setStudent(Set<Student> student) {
-		this.student = student;
-	}
-
-	public Teacher() {
-		super();
-	}
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn
+	private School school;
 
 	public int getTeacherId() {
 		return teacherId;
@@ -60,6 +35,26 @@ public class Teacher {
 
 	public void setTeacherName(String teacherName) {
 		this.teacherName = teacherName;
+	}
+
+	public School getSchool() {
+		return school;
+	}
+
+	public void setSchool(School school) {
+		this.school = school;
+	}
+
+	public Teacher(int teacherId, String teacherName, School school) {
+		super();
+		this.teacherId = teacherId;
+		this.teacherName = teacherName;
+		this.school = school;
+	}
+
+	public Teacher() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 }
