@@ -6,30 +6,30 @@
 ###### Topics Covered:
 
 1. JAVA Basics
- 1.1. Collections Framework
- 1.2. Memory Management
- 1.3. Serialization
- 1.4. Networking & Sockets
- 1.5. Threads
+-  Collections Framework
+-  Memory Management
+-  Serialization
+-  Networking & Sockets
+-  Threads
 
 2. JAVA Spring
- 2.1 Spring Security
- 2.2 Spring Security with JWT (Java Web Tokens)
- 2.3 Spring Authentication
+ - Spring Security
+ - Spring Security with JWT (Java Web Tokens)
+ - Spring Authentication
 
 3. JAVA SpringBoot
- 3.1 REST APIs
+ - REST APIs
 
 4. JPA (Java Persistence API)
-4.1. Hibernate
-4.2. Spring Data JPA
+-  Hibernate
+-  Spring Data JPA
 
 5. Logging Framework
- 5.1 SLF4J
+ - 5.1 SLF4J
 
 6. Testing Frameworks
- 6.1 Unit Testing 
-  6.1.1 jUnit 
+- Unit Testing 
+-  jUnit 
 
 ###### Version: Java 8
 
