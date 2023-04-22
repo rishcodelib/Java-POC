@@ -1,0 +1,31 @@
+Composite Design Pattern: Structural Design Pattern
+
+Used:
+
+Whenever we have a tree structure of objects, and that object internally have multiple objects
+Opetations performed on leaf node, the same operations should be performed on Composite object as well.
+
+Graph:
+
+                      Composite Object
+                      /           \
+              Cabinet              Periphiral Devices
+              /      \                  /           \
+  Hard-Drive    Mother Board        Keyboard       Mouse (Leaf node)
+                  /       \
+                RAM       CPU (Leaf Node)
+                                                        
+Example / Description:
+ 
+To Build a Computer
+
+Composite Object
+
+1: Cabinate
+  1.1: Hard-drive [LEAF Object]
+  2.2: Mother Board
+    2.2.1: RAM   [LEAF Object]
+    2.2.2: CPU
+2: Periphiral Devices
+  1: Keyboard
+  2: Mouse
